@@ -1,6 +1,9 @@
 {
   "name": "oBlank - The Best Blank New Tab Page Extension For Google Chrome",
-  "description": "oBlank override the new tab page with an empty page, for users who don't like the original or custom new tab pages",
+  "short_name":"oBlank",
+  "description": "oBlank override the new tab page with an empty page, for users who don't like the original or custom new tab pages
+                  ** oBlank - The Best Blank New Tab Page Extension For Google Chrome. We believe this is the best chrome extension for Google Chrome and a great productivity too. It's simple and light weight and you can change the the color. 
+                  Click on the page to change color of your blank page. This is an extension for google chrome which gives you a blank page rather than all the stuff which affects your productivity. This extension also gives you ability to change the background color to dark grey and back to white by clicking anywhere on the screen.",
   "version": "1.0",
   "incognito": "split",
   "chrome_url_overrides": { "newtab": "blank.html" },
