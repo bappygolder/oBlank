@@ -1,11 +1,34 @@
-var defaultbg  = "#252525", greybg   = "#FFFFFF";
-       document.body.style.backgroundColor = defaultbg;
-       
-       document.addEventListener("click", function(){
-         if(document.body.style.backgroundColor!=="rgb(255, 255, 255)") {
-            //alert("Fire Only if BG is not Grey")
-            document.body.style.backgroundColor = greybg;
-         } else {
-			 document.body.style.backgroundColor = defaultbg;
-		 }
-      });
+var oBlank = {
+  color: {
+    DEFAULT : '#252525',
+    GREY: '#ffffff'
+  },
+
+  init: function () {
+    var setColor = oBlank.getBackgroundColor();
+    document.body.style.backgroundColor = setColor;
+    oBlank.bindEvents();
+  },
+
+  bindEvents: function () {
+    document.addEventListener("click", function () {
+      if (document.body.style.backgroundColor !== oBlank.color.DEFAULT) {
+        document.body.style.backgroundColor = oBlank.color.GREY;
+        oBlank.setBackgrounColor(oBlank.color.GREY);
+      } else {
+        document.body.style.backgroundColor = oBlank.color.DEFAULT;
+        oBlank.setBackgrounColor(oBlank.color.DEFAULT);
+      }
+    });
+  },
+
+  setBackgrounColor: function(color) {
+    window.localStorage.setItem('oBlank.background', color);
+  },
+
+  getBackgroundColor: function() {
+    return window.localStorage.getItem('oBlank.background')
+  }
+}
+
+oBlank.init();
