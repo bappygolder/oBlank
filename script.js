@@ -1,6 +1,6 @@
 var oBlank = {
   color: {
-    DEFAULT : '#252525',
+    DEFAULT: '#252525',
     GREY: '#ffffff'
   },
 
@@ -22,11 +22,11 @@ var oBlank = {
     });
   },
 
-  setBackgrounColor: function(color) {
+  setBackgrounColor: function (color) {
     window.localStorage.setItem('oBlank.background', color);
   },
 
-  getBackgroundColor: function() {
+  getBackgroundColor: function () {
     return window.localStorage.getItem('oBlank.background')
   }
 }
