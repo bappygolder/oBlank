@@ -12,7 +12,7 @@ var oBlank = {
 
   bindEvents: function () {
     document.addEventListener("click", function () {
-      if (document.body.style.backgroundColor !== oBlank.color.DEFAULT) {
+      if (document.body.style.backgroundColor !== 'rgb(255, 255, 255)') {
         document.body.style.backgroundColor = oBlank.color.GREY;
         oBlank.setBackgrounColor(oBlank.color.GREY);
       } else {
